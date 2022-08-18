@@ -1,0 +1,12 @@
+* {
+  font-family: -apple-system, system-ui;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 5px;
+}
