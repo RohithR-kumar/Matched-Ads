@@ -8,7 +8,7 @@ mongoose.connect(url);
 const app = express();
 app.use(cors());
 
-app.get("/", async (req, res) => {
+app.get("/", (req, res) => {
   res.json({ message: "success" });
 });
 
