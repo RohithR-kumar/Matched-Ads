@@ -2,8 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
-const url = "<url>";
-mongoose.connect(url);
+mongoose.connect(process.env.MONGO_URI);
+const PORT = 5000;
 
 const app = express();
 app.use(cors());
@@ -15,6 +15,6 @@ app.get("/", (req, res) => {
 const MatchedAdsRouter = require("./routes/MatchedAdsRoute");
 app.use("/matchedAds", MatchedAdsRouter);
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log("server started");
 });
